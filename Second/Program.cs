@@ -1,6 +1,5 @@
 ﻿Console.Write("Введите число M: ");
 int m = Convert.ToInt32(Console.ReadLine());
-
 Console.Write("Введите число N: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
@@ -10,7 +9,6 @@ void AkkermanFunction(int m, int n)
 {
     Console.Write($" m = {m}; n = {n} -> A(m,n) = {Akkerman(m, n)}"); 
 }
-
 int Akkerman(int m, int n)
 {
     if (m == 0)

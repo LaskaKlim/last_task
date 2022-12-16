@@ -17,7 +17,6 @@ int SumMN(int m, int n)
         return res;
     }
 }  
-
 void SumFromMToN(int m, int n)
 {
     Console.Write($"Сумма натуральных элементов в промежутке от {m} до {n} равна {SumMN(m - 1, n)}");

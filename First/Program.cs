@@ -4,22 +4,16 @@ int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите число N: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
-SumFromMToN(m, n);
-int SumMN(int m, int n)
+
+void GapNumberSum (int m, int n, int sum)
 {
-    int res = m;
-    if (m == n)
-        return 0;
-    else
+    if (m > n) 
     {
-        m++;
-        res = m + SumMN(m, n);
-        return res;
+        Console.WriteLine($"Сумма натуральных элементов в промежутке от M до N: {sum}"); 
+        return;
     }
-}  
-void SumFromMToN(int m, int n)
-{
-    Console.Write($"Сумма натуральных элементов в промежутке от {m} до {n} равна {SumMN(m - 1, n)}");
+    sum = sum + (m++);
+    GapNumberSum(m, n, sum);
 }
 
-
+GapNumberSum(m, n, 0);
